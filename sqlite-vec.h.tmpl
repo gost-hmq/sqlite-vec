@@ -12,6 +12,8 @@
 #else
   #ifdef _WIN32
     #define SQLITE_VEC_API __declspec(dllexport)
+  #elif defined(__ANDROID__)||defined(__linux__)
+    #define SQLITE_VEC_API __attribute__((visibility("default")))
   #else
     #define SQLITE_VEC_API
   #endif
