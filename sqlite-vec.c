@@ -2973,7 +2973,7 @@ struct vec_npy_each_cursor {
   int eof;
 };
 
-static unsigned char NPY_MAGIC[6] = "\x93NUMPY";
+static unsigned char NPY_MAGIC[7] = "\x93NUMPY";
 
 #ifndef SQLITE_VEC_OMIT_FS
 int parse_npy_file(sqlite3_vtab *pVTab, FILE *file, vec_npy_each_cursor *pCur) {
